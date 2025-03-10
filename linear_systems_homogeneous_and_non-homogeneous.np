@@ -1,0 +1,119 @@
+Notebook[{Cell[
+BoxData[RowBox[{"(*",RowBox[{"Linear"," ",RowBox[{"Systems",":"," ",RowBox[
+{RowBox[{"Homogeneous"," ","and"," ","Non"}],"-","Homogeneous"}]}]}],"*)"}]],"Input",
+ExpressionUUID -> "eaeabf06-7897-4a86-9bfa-e9732302f582"],Cell[
+BoxData[RowBox[{RowBox[
+{"(*",RowBox[{"Homogeneous"," ","Linear"," ","Systems"}],"*)"}],"\n",RowBox[{"(*"," ",RowBox[
+{RowBox[{RowBox[{"A"," ","homogeneous"," ","system"," ","has"," ","the"," ","form"," ","Ax"}]," ","="," ","0"}],","," ",RowBox[
+{RowBox[{"where"," ","A"," ","is"," ","a"," ","matrix"," ","and"," ","x"," ","is"," ","a"," ","vector"," ","of"," ",RowBox[
+{"unknowns","."," ","The"}]," ","right"}],"-",RowBox[{"hand"," ","side"," ","is"," ","always"," ",RowBox[
+{"zero","."," ","Homogeneous"}]," ","systems"," ","always"," ","have"," ","at"," ","least"," ","the"," ","trivial"," ","solution"," ",RowBox[
+{RowBox[{"(",RowBox[{"x"," ","="," ","0"}],")"}],"."}]}]}]}]," ","*)"}]}]],"Input",
+ExpressionUUID -> "c029cc10-dca6-474a-a624-a7ba5430931f"],Cell[
+BoxData[RowBox[{RowBox[
+{RowBox[{RowBox[{"(*"," ",RowBox[{"Define"," ","a"," ","meaningful"," ","coefficient"," ","matrix"," ","A"}]," ","*)"}],"\n","A"}]," ","="," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"1",","," ","2",","," ",RowBox[{"-","1"}]}],"}"}],","," ",RowBox[
+{"{",RowBox[{"2",","," ","4",","," ",RowBox[{"-","2"}]}],"}"}],","," ",RowBox[{"{",RowBox[
+{"3",","," ","6",","," ",RowBox[{"-","3"}]}],"}"}]}],"}"}]}],";"}]],"Input",CellLabel -> "In[29]:= ",
+ExpressionUUID -> "44bfe1ab-7751-40fa-9faf-1199fe7656bf"],Cell[
+BoxData[RowBox[{RowBox[
+{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Define"," ","the"," ","homogeneous"," ","system"," ","Ax"}]," ","="," ","0"}]," ","*)"}],"\n","b"}]," ","="," ",RowBox[
+{"{",RowBox[{"0",","," ","0",","," ","0"}],"}"}]}],";"}]],"Input",CellLabel -> "In[30]:= ",
+ExpressionUUID -> "d023c120-c146-4294-936b-23b35cca939b"],Cell[
+BoxData[RowBox[{RowBox[
+{RowBox[{"(*"," ",RowBox[{"Solve"," ","the"," ","system"}]," ","*)"}],"\n","solHomogeneous"}]," ","="," ",RowBox[
+{"Solve","[",RowBox[{RowBox[{RowBox[{"A"," ","."," ",RowBox[{"{",RowBox[{"x",","," ","y",","," ","z"}],"}"}]}]," ","=="," ","b"}],","," ",RowBox[
+{"{",RowBox[{"x",","," ","y",","," ","z"}],"}"}]}],"]"}]}]],"Input",CellLabel -> "In[31]:= ",
+ExpressionUUID -> "f8e3821b-c269-4e19-9976-f28913864426"],Cell[
+BoxData[TemplateBox[
+{"Solve","svars","\"Equations may not give solutions for all \\\"solve\\\" variables.\"",2,31,3,17977221436693163549,"Local"},
+"MessageTemplate",BaseStyle -> "MSG"],StandardForm],"MSG","Message",ExpressionUUID -> "53098fa9-df05-48f0-b1b2-1d7d51eaa2d0"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{",RowBox[{"z","\[Rule]",RowBox[{"x","+",RowBox[{"2"," ","y"}]}]}],"}"}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[31]= ",ExpressionUUID -> "5847d431-737f-4908-9c6c-acffe9fdf2a2"],Cell[
+BoxData[
+RowBox[{"(*"," ",RowBox[{RowBox[{"This"," ","system"," ","represents"," ","three"," ","collinear"," ","planes"," ","in"," ",RowBox[
+{"R","^","3"}]}],","," ",RowBox[{"leading"," ","to"," ","infinitely"," ","many"," ","solutions"," ","forming"," ","a"," ",RowBox[
+{"line","."}]}]}]," ","*)"}]],"Input",CellLabel -> "In[32]:= ",ExpressionUUID -> "772cdca0-598d-478a-9b7b-24527199e0e8"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{RowBox[{"(*"," ",RowBox[{"Visualize"," ","the"," ","solution"," ","space"}]," ","*)"}],"\n",RowBox[
+{"ParametricPlot3D","[","\n"," ",RowBox[{RowBox[{"Evaluate","[",RowBox[{RowBox[{"{",RowBox[
+{"x",","," ","y",","," ","z"}],"}"}]," ","/."," ",RowBox[{"{",RowBox[{RowBox[{"x"," ","->"," ","t"}],","," ",RowBox[
+{"y"," ","->"," ",RowBox[{RowBox[{"-","2"}]," ","t"}]}],","," ",RowBox[{"z"," ","->"," ","t"}]}],"}"}]}],"]"}],",","\n"," ",RowBox[
+{"{",RowBox[{"t",","," ",RowBox[{"-","5"}],","," ","5"}],"}"}],",","\n"," ",RowBox[
+{"PlotRange"," ","->"," ","All"}],","," ",RowBox[{"AxesLabel"," ","->"," ",RowBox[
+{"{",RowBox[{"\"x\"",","," ","\"y\"",","," ","\"z\""}],"}"}]}],",","\n"," ",RowBox[
+{"PlotStyle"," ","->"," ",RowBox[{"{",RowBox[{"Thick",","," ","Blue"}],"}"}]}],",","\n"," ",RowBox[
+{"PlotLabel"," ","->"," ","\"Solution Space of Homogeneous System\""}]}],"\n","]"}]}]],
+"Input",CellLabel -> "In[33]:= ",ExpressionUUID -> "279acb9a-616d-4f46-b771-07629194229f"],Cell[
+BoxData[
+Graphics3DBox[{{{{},{},TagBox[{AbsoluteThickness[2],Thickness[Large],RGBColor[0,0,
+1],Line3DBox[CompressedData["1:eJw91X9MFHQYx/G7kxMOTo67A/Ho5A6+jRnbiZMpA2n3VbqdW4EEQS2X2QmNEQWJUxxqMRHS2lIQneD9IRLJWNHcVHS5ewqSkiIXEzL6QZKHiD/4dXqheLHxfPrjs9fe/z7/PHGu0pxClUKhyJzfovntHc2cCgSMtKCQaG/lUt/QEygkOivir0cX/oVCoq2pZXOl01BI9LeH6kKGvVBIdMjKwVj6CQqJPrpj64sfNkEh0e3K8hZFChQSrS50rja9YWDjJdr463clzUf0bJxE53Q1bnvuagRrlejKB8+XHB7RsRaJ7tzVWNyxKZyNleisujzr0xNa1izRTvflrI13Q9kYiW7t2T1QvlnDmiR6S/XRqJ/PBLPREr1v66Ivw4yL2aUSrbBZPBkHgthIif7t4xO17ddVrEGizaFFbTMblKxeot9Zk6geMgc8C+okelvKn2e6uh6zYRKdWJEWeK/Fz4ZI9Kk/crt3r/exaokerYpKdy6bYlUSfalhheN2/j12zo5eNXZjJsntZR/a0S9cGtLM5Q+zE3Z0WVuHX2/sZ0fs6Py3xalf9lxkf7Cje368cSg5t9O+4Pf/d5rtm7PZx/vZEQ9atTPq9wLTMDvhQQdrs6tc973sQw96//BAxvbT99g5D/qrpprsfVOTrJLQpc0FEf/k+1g1obcUNy6vrfKzIYQ++PLO1OSTj9kwQgdFNng/mH3KhhN6sPfARLVOKRfUEzqv0rW2sUvFGghdEjYe3/d6EBtJaEv7lWOL76jZKEJXdmbk6pqC2WhCl7WWnF+bpGFNhNaqUlwrb4WyMYR2vPtKQ2K9ljUTetnF5aWOZ8PZWELXbf/oyKpBHWshdE7NJpv7fARrJXTi5uq8lr16No7QA15Nc32egY0ndJ/r1nqDxcgKQv8d9Lm/IR4KQs+0FnWYEqAgtGl83Bxng4LQBeVTj5LWQUHo2f2BLzJfhYLQCZ+ZYg5+CgWhU51D17T1UBD6pbGTtYePQUHo921W33E3FIT++lzCtdZ2KAidcyW5prsHCkIXFvnSN/ZCQeiK0AvTvX1QENqdlfZW/3UoCH17QKbfHIGC0LMVqunCUTh/B+4lz3S3jd2BgtCr33RGT05CQWiHUtO3wwcFoV87fbXa74eC0MWOT9bteQIFofkfsoLQ/wGLgGFr"]]},
+Function[Annotation[Slot[1],"Charting`Private`Tag$80916#1"]]]}},{}},{DisplayFunction -> Identity,PlotRangePadding -> {{Scaled[
+0.05`],Scaled[0.05`]},{Scaled[0.05`],Scaled[0.05`]},{Scaled[0.05`],Scaled[0.05`]}},ImagePadding -> Automatic,DisplayFunction -> Identity,Axes -> True,AxesLabel -> {FormBox[
+"\"x\"",TraditionalForm],FormBox["\"y\"",TraditionalForm],FormBox["\"z\"",TraditionalForm]},RuleDelayed[
+DisplayFunction,Identity],FaceGridsStyle -> Automatic,Method -> CompressedData["1:eJylkMFuwjAMhgsDoV122HE3noEHmNBgMGlFVVtxzzoHoqVxZScSPDcvgFNpU4eqXoiU6HfifP7t+RfmepQkCU/k+DTs9fg3yoOF4kXECrQK1m9INUdT8YfzQKryBp1+GPg6E7EHYsmjRbsurzcpzyJKYf2kGBgyZNNSx11qK0oKwFMR78oy9BRaaw2V50FDjyK25nC0sv1g17ESKfFi4v3N41MXk6Fxd7CipRVhY40D/t93z6g0AWik+i0QI6X4DX/D6eE2VlVQg/OD3Gj9VMSxLa3teTsXMdyhgyta5XwM"],PlotLabel -> FormBox[
+"\"Solution Space of Homogeneous System\"",TraditionalForm],PlotRange -> {All,All,All},PlotRangePadding -> {Automatic,Automatic,Automatic},Ticks -> {Automatic,Automatic,Automatic}},
+ExpressionUUID -> "23a81faa-aec3-4bf5-b4ff-88c04f25318e"],StandardForm],"Output",
+CellLabel -> "Out[33]= ",ExpressionUUID -> "87af0c59-8138-4104-8673-1daded2b36f1"]},
+Open],ExpressionUUID -> "234a243d-d515-428d-890d-09840c37f47a"],Cell[
+BoxData[RowBox[
+{RowBox[{"(*",RowBox[{"Non","-",RowBox[{"Homogeneous"," ","Linear"," ","Systems"}]}],"*)"}],"\n",RowBox[
+{"(*"," ",RowBox[{RowBox[{RowBox[{RowBox[{"A"," ","non"}],"-",RowBox[{"homogeneous"," ","system"," ","has"," ","the"," ","form"," ","Ax"}]}]," ","="," ","b"}],","," ",RowBox[
+{"where"," ","b"," ","is"," ","not"," ","necessarily"," ",RowBox[{"zero","."," ","If"}]," ","the"," ","matrix"," ","A"," ","is"," ","singular"}],","," ",RowBox[
+{"the"," ","system"," ","may"," ","have"," ","no"," ","solutions"," ","or"," ","infinitely"," ",RowBox[
+{"many","."}]}]}]," ","*)"}]}]],"Input",ExpressionUUID -> "5fc8cf10-2fbd-4e41-bb4e-eae842c8a60d"],Cell[
+BoxData[
+RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Define"," ","a"," ","new"," ","coefficient"," ","matrix"," ","with"," ","independent"," ","rows"}]," ","*)"}],"\n","A2"}]," ","="," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"2",","," ",RowBox[{"-","1"}],","," ","1"}],"}"}],","," ",RowBox[
+{"{",RowBox[{"1",","," ","3",","," ","2"}],"}"}],","," ",RowBox[{"{",RowBox[{"3",","," ","2",","," ",RowBox[
+{"-","4"}]}],"}"}]}],"}"}]}],";"}]],"Input",CellLabel -> "In[35]:= ",ExpressionUUID -> "1f7aafa2-1157-4daf-9710-b6c5d7f41869"],Cell[
+BoxData[
+RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Define"," ","a"," ","meaningful"," ","right"}],"-",RowBox[
+{"hand"," ","side"," ","vector"," ","b"}]}]," ","*)"}],"\n","bNonHomogeneous"}]," ","="," ",RowBox[
+{"{",RowBox[{"3",","," ","5",","," ",RowBox[{"-","2"}]}],"}"}]}],";"}]],"Input",CellLabel -> "In[36]:= ",
+ExpressionUUID -> "9e24f749-cc08-4c02-ab96-cd5b7121418a"],Cell[
+CellGroupData[{Cell[
+BoxData[
+RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Solve"," ","the"," ","system"," ","Ax"}]," ","="," ","b"}]," ","*)"}],"\n","solNonHomogeneous"}]," ","="," ",RowBox[
+{"Solve","[",RowBox[{RowBox[{RowBox[{"A2"," ","."," ",RowBox[{"{",RowBox[{"x",","," ","y",","," ","z"}],"}"}]}]," ","=="," ","bNonHomogeneous"}],","," ",RowBox[
+{"{",RowBox[{"x",","," ","y",","," ","z"}],"}"}]}],"]"}]}]],"Input",CellLabel -> "In[37]:= ",
+ExpressionUUID -> "ddfa8c9e-37db-4ddf-b416-29114ab6cb64"],Cell[
+BoxData[RowBox[{"{",RowBox[
+{"{",RowBox[{RowBox[{"x","\[Rule]",FractionBox["48","49"]}],",",RowBox[{"y","\[Rule]",FractionBox[
+"19","49"]}],",",RowBox[{"z","\[Rule]",FractionBox["10","7"]}]}],"}"}],"}"}],StandardForm],
+"Output",CellLabel -> "Out[37]= ",ExpressionUUID -> "39d22e2b-02b6-49e0-9acb-055f0bba67cf"]},
+Open],ExpressionUUID -> "a08d1552-fca9-463d-aca8-c5edf0770439"],Cell[
+BoxData[RowBox[
+{"(*"," ",RowBox[{"This"," ","system"," ","represents"," ","three"," ","planes"," ","in"," ",RowBox[
+{"R","^","3"}]," ","that"," ","intersect"," ","at"," ","a"," ","unique"," ",RowBox[
+{"point","."}]}]," ","*)"}]],"Input",CellLabel -> "In[38]:= ",ExpressionUUID -> "0325dd5f-340a-4ab5-9d17-ab61538c2839"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{RowBox[{"(*"," ",RowBox[{"Display"," ","the"," ","particular"," ","solution"," ","if"," ","it"," ","exists"}]," ","*)"}],"\n","solNonHomogeneous"}]],
+"Input",CellLabel -> "In[39]:= ",ExpressionUUID -> "73188e86-2763-4e3f-bfe0-81684f7c0fbf"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{",RowBox[{RowBox[{"x","\[Rule]",FractionBox["48","49"]}],",",RowBox[
+{"y","\[Rule]",FractionBox["19","49"]}],",",RowBox[{"z","\[Rule]",FractionBox["10",
+"7"]}]}],"}"}],"}"}],StandardForm],"Output",CellLabel -> "Out[39]= ",ExpressionUUID -> "e6e32ae9-d216-45bb-b397-ff51b6dfed99"]},
+Open],ExpressionUUID -> "b125820b-a798-4e60-ab18-165153042ebe"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Plot"," ","the"," ","solution"," ","point"," ","in"," ","3","D"}]," ","*)"}],"\n",RowBox[
+{"Graphics3D","[","\n"," ",RowBox[{RowBox[{"{","\n","  ",RowBox[{"{",RowBox[{"Red",","," ",RowBox[
+{"PointSize","[","Large","]"}],","," ",RowBox[{"Point","[",RowBox[{RowBox[{"{",RowBox[
+{"x",","," ","y",","," ","z"}],"}"}]," ","/."," ","solNonHomogeneous"}],"]"}]}],"}"}]," ",RowBox[
+{"(*"," ",RowBox[{"Solution"," ","point"}]," ","*)"}],"\n"," ","}"}],",","\n"," ",RowBox[
+{"Axes"," ","->"," ","True"}],","," ",RowBox[{"AxesLabel"," ","->"," ",RowBox[{"{",RowBox[
+{"\"x\"",","," ","\"y\"",","," ","\"z\""}],"}"}]}],",","\n"," ",RowBox[{"PlotLabel"," ","->"," ","\"Unique Solution of Non-Homogeneous System\""}]}],"\n","]"}]}],"\n"}]],
+"Input",CellLabel -> "In[40]:= ",ExpressionUUID -> "c9ede0a3-c659-41b1-ad37-ac44e24476e8"],Cell[
+BoxData[
+Graphics3DBox[{{RGBColor[1,0,0],PointSize[Large],Point3DBox[NCache[{{Rational[48,
+49],Rational[19,49],Rational[10,7]}},{{0.9795918367346939`,0.3877551020408163`,1.4285714285714286`}}]]}},
+Axes -> True,AxesLabel -> {FormBox["\"x\"",TraditionalForm],FormBox["\"y\"",TraditionalForm],FormBox[
+"\"z\"",TraditionalForm]},PlotLabel -> FormBox["\"Unique Solution of Non-Homogeneous System\"",
+TraditionalForm],ExpressionUUID -> "167c0345-fa94-4fb8-8f74-a44abb2e4b25"],StandardForm],
+"Output",CellLabel -> "Out[40]= ",ExpressionUUID -> "a4a89d28-4b24-4ad5-aac3-e87e58b97d24"]},
+Open],ExpressionUUID -> "f15c447a-0495-4d4a-9981-f7fe88555d89"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.2 for Wolfram Cloud 1.70.1 (December 30, 2024)"]
