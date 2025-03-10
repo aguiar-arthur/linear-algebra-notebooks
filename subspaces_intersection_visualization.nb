@@ -1,0 +1,60 @@
+Notebook[{Cell[
+BoxData[{RowBox[{RowBox[{"v1"," ","="," ",RowBox[{"{",RowBox[{"1",","," ","2",","," ","3"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"v2"," ","="," ",RowBox[{"{",RowBox[{"4",","," ","5",","," ","6"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"w1"," ","="," ",RowBox[{"{",RowBox[{"1",","," ","0",","," ","1"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"w2"," ","="," ",RowBox[{"{",RowBox[{"0",","," ","1",","," ","1"}],"}"}]}],";"}]}],
+"Input",CellLabel -> "In[21]:= ",ExpressionUUID -> "ae1a1cc9-c615-4c53-b12c-2c5d3adec7a3"],Cell[
+BoxData[
+{RowBox[{RowBox[{"A"," ","="," ",RowBox[{"Transpose","[",RowBox[{"{",RowBox[{"v1",","," ","v2",","," ",RowBox[
+{"-","w1"}],","," ",RowBox[{"-","w2"}]}],"}"}],"]"}]}],";"}],"\n",RowBox[{RowBox[
+{"sol"," ","="," ",RowBox[{"NullSpace","[","A","]"}]}],";"}]}],"Input",CellLabel -> "In[25]:= ",
+ExpressionUUID -> "c7755860-027e-43e1-b91a-a0d6688e8923"],Cell[
+CellGroupData[{Cell[
+BoxData[
+{RowBox[{RowBox[{"intersection"," ","="," ",RowBox[{"sol"," ","."," ",RowBox[{"{",RowBox[
+{"v1",","," ","v2",","," ","w1",","," ","w2"}],"}"}]}]}],";"}],"\n","intersection"}],
+"Input",CellLabel -> "In[27]:= ",ExpressionUUID -> "4c00cd9d-22d5-47fe-be9c-f71395775ada"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{",RowBox[{"2",",","4",",","6"}],"}"}],"}"}],StandardForm],"Output",
+CellLabel -> "Out[28]= ",ExpressionUUID -> "6673ae60-926b-4d06-9da2-8f744b1182cb"]},
+Open],ExpressionUUID -> "ee7e6d71-d768-4c68-915f-b1919acaad3f"],Cell[
+BoxData[{RowBox[
+{RowBox[{"v1"," ","="," ",RowBox[{"{",RowBox[{"1",","," ","0",","," ","0"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"v2"," ","="," ",RowBox[{"{",RowBox[{"0",","," ","1",","," ","0"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"w1"," ","="," ",RowBox[{"{",RowBox[{"1",","," ","0",","," ","1"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"w2"," ","="," ",RowBox[{"{",RowBox[{"0",","," ","1",","," ","1"}],"}"}]}],";"}]}],
+"Input",CellLabel -> "In[29]:= ",ExpressionUUID -> "7ac6a7ff-c398-461d-9715-c3e9b3f04b13"],Cell[
+BoxData[
+{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Getting"," ","the"," ","intersection"}]," ","*)"}],"\n","A"}]," ","="," ",RowBox[
+{"Transpose","[",RowBox[{"{",RowBox[{"v1",","," ","v2",","," ",RowBox[{"-","w1"}],","," ",RowBox[
+{"-","w2"}]}],"}"}],"]"}]}],";"}],"\n",RowBox[{RowBox[{"sol"," ","="," ",RowBox[{"NullSpace","[","A","]"}]}],";"}]}],
+"Input",CellLabel -> "In[33]:= ",ExpressionUUID -> "72cd8666-1240-4a89-a67d-348227790abf"],Cell[
+BoxData[
+RowBox[{RowBox[{"intersection"," ","="," ",RowBox[{"Line","[",RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"-","2"}],","," ",RowBox[{"-","2"}],","," ",RowBox[{"-","2"}]}],"}"}],","," ",RowBox[
+{"{",RowBox[{"2",","," ","2",","," ","2"}],"}"}]}],"}"}],"]"}]}],";"}]],"Input",ExpressionUUID -> "741bf0a4-eb1c-4f1a-997d-2c5cd6c087b9"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"Graphics3D","[",RowBox[{RowBox[{"{","\n","  ",RowBox[{RowBox[
+{"{",RowBox[{RowBox[{"Opacity","[","0.5","]"}],","," ","Blue",","," ",RowBox[{"InfinitePlane","[",RowBox[
+{RowBox[{"{",RowBox[{"0",","," ","0",","," ","0"}],"}"}],","," ",RowBox[{"{",RowBox[
+{"v1",","," ","v2"}],"}"}]}],"]"}]}],"}"}],",","\n","  ",RowBox[{"{",RowBox[{RowBox[
+{"Opacity","[","0.5","]"}],","," ","Red",","," ",RowBox[{"InfinitePlane","[",RowBox[
+{RowBox[{"{",RowBox[{"0",","," ","0",","," ","0"}],"}"}],","," ",RowBox[{"{",RowBox[
+{"w1",","," ","w2"}],"}"}]}],"]"}]}],"}"}],",","\n","  ",RowBox[{"{",RowBox[{"Thick",","," ","Black",","," ","intersecao"}],"}"}]}],"\n","}"}],","," ",RowBox[
+{"Axes"," ","\[Rule]"," ","True"}],","," ",RowBox[{"BoxRatios"," ","\[Rule]"," ",RowBox[
+{"{",RowBox[{"1",","," ","1",","," ","1"}],"}"}]}]}],"]"}]],"Input",CellLabel -> "In[36]:= ",
+ExpressionUUID -> "100697d5-0954-416f-9cef-fc16a7ef0c7f"],Cell[
+BoxData[Graphics3DBox[
+{{Opacity[0.5`],RGBColor[0,0,1],TagBox[ConicHullRegion3DBox[{0,0,0},{{1,0,0},{0,1,0}}],
+"InfinitePlane"]},{Opacity[0.5`],RGBColor[1,0,0],TagBox[ConicHullRegion3DBox[{0,0,0},
+{{1,0,1},{0,1,1}}],"InfinitePlane"]},{Thickness[Large],GrayLevel[0],Line3DBox[{{-2,-2,-2},{2,2,2}}]}},
+Axes -> True,BoxRatios -> {1,1,1},ExpressionUUID -> "ebd94e44-b3b5-48b6-afa3-8e5f5c509db7"],
+StandardForm],"Output",CellLabel -> "Out[36]= ",ExpressionUUID -> "8c60184c-7977-46fd-91dc-c813a6e94690"]},
+Open],ExpressionUUID -> "fefd2b61-7298-4cc8-932a-6a8f7bcac5a4"],Cell[
+TextData[{"Blue"," ","is"," ","the",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\|01d449"," "}]],"subspace",".","\n","Red"," ","is"," ","the",StyleBox[
+RowBox[{" ","\[NonBreakingSpace]","\|01d44a"," "}]],"subspace",".","\n","The"," ","black"," ","line"," ","is"," ","the"," ","intersection",StyleBox[
+RowBox[{"\[NonBreakingSpace]","\|01d449\:2229\|01d44a."}]]}],"Text",CellDingbat -> None,
+ExpressionUUID -> "a1663f0d-37f8-45d2-800c-459a0f74a67b"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.2 for Wolfram Cloud 1.70.1 (December 30, 2024)"]
