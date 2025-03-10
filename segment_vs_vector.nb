@@ -1,0 +1,73 @@
+Notebook[{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Define"," ","points"," ","for"," ","the"," ","segment"," ","and"," ","vectors"}]," ","*)"}],"\n","p1"}]," ","="," ",RowBox[
+{"{",RowBox[{"1",","," ","1"}],"}"}]}],";"}],"\n",RowBox[{RowBox[{"p2"," ","="," ",RowBox[
+{"{",RowBox[{"4",","," ","3"}],"}"}]}],";"}],"\n",RowBox[{RowBox[{"vector2D"," ","="," ",RowBox[
+{"p2"," ","-"," ","p1"}]}],";"}]}],"Input",CellLabel -> "In[17]:= ",ExpressionUUID -> "6c41bb8b-2a2b-4a8a-a12d-5e5e6b0743b8"],Cell[
+BoxData[
+{RowBox[{RowBox[{"p3"," ","="," ",RowBox[{"{",RowBox[{"1",","," ","1",","," ","1"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"p4"," ","="," ",RowBox[{"{",RowBox[{"4",","," ","3",","," ","5"}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"vector3D"," ","="," ",RowBox[{"p4"," ","-"," ","p3"}]}],";"}]}],"Input",
+CellLabel -> "In[20]:= ",ExpressionUUID -> "919bfa80-2028-4a37-9ded-0fd13194a66a"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{RowBox[{"(*"," ",RowBox[{"Plot"," ","for"," ","2","D"," ",RowBox[
+{"case",":"," ",RowBox[{"Segment"," ",RowBox[{"vs","."," ","Vector"}]}]}]}]," ","*)"}],"\n",RowBox[
+{"Graphics","[","\n"," ",RowBox[{RowBox[{"{","\n","  ",RowBox[{RowBox[{"{",RowBox[
+{"Blue",","," ","Thick",","," ",RowBox[{"Line","[",RowBox[{"{",RowBox[{"p1",","," ","p2"}],"}"}],"]"}]}],"}"}],","," ",RowBox[
+{"(*"," ",RowBox[{"Line"," ","segment"," ","from"," ","p1"," ","to"," ","p2"}]," ","*)"}],"\n","  ",RowBox[
+{"{",RowBox[{"Red",","," ","Thick",","," ",RowBox[{"Arrow","[",RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{"0",","," ","0"}],"}"}],","," ","vector2D"}],"}"}],"]"}]}],"}"}],","," ",RowBox[
+{"(*"," ",RowBox[{"Vector"," ","starting"," ","at"," ","origin"}]," ","*)"}],"\n","  ",RowBox[
+{"{",RowBox[{"Black",","," ",RowBox[{"PointSize","[","Large","]"}],","," ",RowBox[
+{"Point","[","p1","]"}]}],"}"}],","," ",RowBox[{"(*"," ",RowBox[{"Mark"," ","segment"," ","start"}]," ","*)"}],"\n","  ",RowBox[
+{"{",RowBox[{"Black",","," ",RowBox[{"PointSize","[","Large","]"}],","," ",RowBox[
+{"Point","[","p2","]"}]}],"}"}]}],"  ",RowBox[{"(*"," ",RowBox[{"Mark"," ","segment"," ","end"}]," ","*)"}],"\n"," ","}"}],",","\n"," ",RowBox[
+{"Axes"," ","->"," ","True"}],","," ",RowBox[{"GridLines"," ","->"," ","Automatic"}],",","\n"," ",RowBox[
+{"PlotRange"," ","->"," ",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"-","1"}],","," ","5"}],"}"}],","," ",RowBox[
+{"{",RowBox[{RowBox[{"-","1"}],","," ","5"}],"}"}]}],"}"}]}],",","\n"," ",RowBox[
+{"AxesLabel"," ","->"," ",RowBox[{"{",RowBox[{"\"x\"",","," ","\"y\""}],"}"}]}],",","\n"," ",RowBox[
+{"PlotLabel"," ","->"," ","\"2D: Line Segment vs. Vector\""}]}],"\n","]"}]}]],"Input",
+CellLabel -> "In[23]:= ",ExpressionUUID -> "3449eca7-5d5b-4672-bc9c-7c5b10f4cfad"],Cell[
+BoxData[
+GraphicsBox[{{RGBColor[0,0,1],Thickness[Large],LineBox[{{1,1},{4,3}}]},{RGBColor[
+1,0,0],Thickness[Large],ArrowBox[{{0,0},{3,2}}]},{GrayLevel[0],PointSize[Large],PointBox[
+{1,1}]},{GrayLevel[0],PointSize[Large],PointBox[{4,3}]}},Axes -> True,GridLines -> Automatic,
+PlotRange -> {{-1,5},{-1,5}},AxesLabel -> {FormBox["\"x\"",TraditionalForm],FormBox[
+"\"y\"",TraditionalForm]},PlotLabel -> FormBox["\"2D: Line Segment vs. Vector\"",
+TraditionalForm]],StandardForm],"Output",CellLabel -> "Out[23]= ",ExpressionUUID -> "baf7f363-7046-46dc-9b64-ce5cc46a94b3"]},
+Open],ExpressionUUID -> "295294c1-6e21-4594-9c1e-06c1a1163d16"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Plot"," ","for"," ","3","D"," ",RowBox[
+{"case",":"," ",RowBox[{"Segment"," ",RowBox[{"vs","."," ","Vector"}]}]}]}]," ","*)"}],"\n",RowBox[
+{"Graphics3D","[","\n"," ",RowBox[{RowBox[{"{","\n","  ",RowBox[{RowBox[{"{",RowBox[
+{"Blue",","," ","Thick",","," ",RowBox[{"Line","[",RowBox[{"{",RowBox[{"p3",","," ","p4"}],"}"}],"]"}]}],"}"}],","," ",RowBox[
+{"(*"," ",RowBox[{"Line"," ","segment"," ","from"," ","p3"," ","to"," ","p4"}]," ","*)"}],"\n","  ",RowBox[
+{"{",RowBox[{"Red",","," ","Thick",","," ",RowBox[{"Arrow","[",RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{"0",","," ","0",","," ","0"}],"}"}],","," ","vector3D"}],"}"}],"]"}]}],"}"}],","," ",RowBox[
+{"(*"," ",RowBox[{"Vector"," ","starting"," ","at"," ","origin"}]," ","*)"}],"\n","  ",RowBox[
+{"{",RowBox[{"Black",","," ",RowBox[{"PointSize","[","Large","]"}],","," ",RowBox[
+{"Point","[","p3","]"}]}],"}"}],","," ",RowBox[{"(*"," ",RowBox[{"Mark"," ","segment"," ","start"}]," ","*)"}],"\n","  ",RowBox[
+{"{",RowBox[{"Black",","," ",RowBox[{"PointSize","[","Large","]"}],","," ",RowBox[
+{"Point","[","p4","]"}]}],"}"}],","," ",RowBox[{"(*"," ",RowBox[{"Mark"," ","segment"," ","end"}]," ","*)"}],"\n","  ",RowBox[
+{"{",RowBox[{"Green",","," ",RowBox[{"PointSize","[","Large","]"}],","," ",RowBox[
+{"Point","[",RowBox[{"{",RowBox[{"0",","," ","0",","," ","0"}],"}"}],"]"}]}],"}"}]}]," ",RowBox[
+{"(*"," ",RowBox[{"Mark"," ","vector"," ","origin"," ","in"," ","3","D"}]," ","*)"}],"\n"," ","}"}],",","\n"," ",RowBox[
+{"Axes"," ","->"," ","True"}],","," ",RowBox[{"Boxed"," ","->"," ","False"}],",","\n"," ",RowBox[
+{"PlotRange"," ","->"," ",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"-","1"}],","," ","5"}],"}"}],","," ",RowBox[
+{"{",RowBox[{RowBox[{"-","1"}],","," ","5"}],"}"}],","," ",RowBox[{"{",RowBox[{RowBox[
+{"-","1"}],","," ","6"}],"}"}]}],"}"}]}],",","\n"," ",RowBox[{"AxesLabel"," ","->"," ",RowBox[
+{"{",RowBox[{"\"x\"",","," ","\"y\"",","," ","\"z\""}],"}"}]}],",","\n"," ",RowBox[
+{"PlotLabel"," ","->"," ","\"3D: Line Segment vs. Vector\""}]}],"\n","]"}]}],"\n"}]],
+"Input",CellLabel -> "In[25]:= ",ExpressionUUID -> "d3e20c19-f807-4d0e-bb9d-45bcb80c358b"],Cell[
+BoxData[
+Graphics3DBox[{{RGBColor[0,0,1],Thickness[Large],Line3DBox[{{1,1,1},{4,3,5}}]},{RGBColor[
+1,0,0],Thickness[Large],Arrow3DBox[{{0,0,0},{3,2,4}}]},{GrayLevel[0],PointSize[Large],Point3DBox[
+{1,1,1}]},{GrayLevel[0],PointSize[Large],Point3DBox[{4,3,5}]},{RGBColor[0,1,0],PointSize[
+Large],Point3DBox[{0,0,0}]}},Axes -> True,Boxed -> False,PlotRange -> {{-1,5},{-1,5},{-1,6}},
+AxesLabel -> {FormBox["\"x\"",TraditionalForm],FormBox["\"y\"",TraditionalForm],FormBox[
+"\"z\"",TraditionalForm]},PlotLabel -> FormBox["\"3D: Line Segment vs. Vector\"",
+TraditionalForm],ExpressionUUID -> "04bfcc78-163f-4b07-87ab-b73ca7927b7e"],StandardForm],
+"Output",CellLabel -> "Out[25]= ",ExpressionUUID -> "559e9dde-fc40-4940-9e77-ae575f3443b5"]},
+Open],ExpressionUUID -> "2331e0bb-9fa5-4f1a-b5a4-022faea14fdb"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.2 for Wolfram Cloud 1.70.1 (December 30, 2024)"]
