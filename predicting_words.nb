@@ -1,0 +1,69 @@
+Notebook[{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[
+{RowBox[{"Step"," ","1"}],":"," ",RowBox[{"Define"," ","the"," ","dataset"}]}]," ","*)"}],"\n",RowBox[
+{"(*"," ",RowBox[{"Input"," ","data"," ",RowBox[{"(","x",")"}]," ","and"," ","output"," ","data"," ",RowBox[
+{"(","y",")"}]}]," ","*)"}],"\n","x"}]," ","="," ",RowBox[{"{",RowBox[{"1",","," ","2",","," ","3",","," ","4"}],"}"}]}],";"}]," ",RowBox[
+{"(*"," ",RowBox[{"Independent"," ","variable"," ",RowBox[{"(","input",")"}]}]," ","*)"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"y"," ","="," ",RowBox[{"{",RowBox[{"2",","," ","4",","," ","6",","," ","8"}],"}"}]}],";"}]," ",RowBox[
+{"(*"," ",RowBox[{"Dependent"," ","variable"," ",RowBox[{"(","output",")"}]}]," ","*)"}]}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Step"," ","2"}],":"," ",RowBox[
+{"Initialize"," ","parameters"}]}]," ","*)"}],"\n",RowBox[{"(*"," ",RowBox[{"c1",":"," ",RowBox[
+{"Slope"," ",RowBox[{"(","weight",")"}]," ","of"," ","the"," ","linear"," ","regression"," ","model"}]}]," ","*)"}],"\n",RowBox[
+{"(*"," ",RowBox[{"c0",":"," ",RowBox[{"Bias"," ",RowBox[{"(","intercept",")"}]," ","of"," ","the"," ","linear"," ","regression"," ","model"}]}]," ","*)"}],"\n","c1"}]," ","="," ","0"}],";"}]," ",RowBox[
+{"(*"," ",RowBox[{"Initial"," ","slope"}]," ","*)"}]}],"\n",RowBox[{RowBox[{RowBox[
+{"c0"," ","="," ","0"}],";"}]," ",RowBox[{"(*"," ",RowBox[{"Initial"," ","bias"}]," ","*)"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"learningRate"," ","="," ","0.01"}],";"}]," ",RowBox[{"(*"," ",RowBox[
+{"Learning"," ","rate"," ","controls"," ","the"," ","step"," ","size"," ","during"," ","training"}]," ","*)"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"numIterations"," ","="," ","1000"}],";"}]," ",RowBox[{"(*"," ",RowBox[
+{"Number"," ","of"," ","training"," ","iterations"}]," ","*)"}]}],RowBox[{"\n","\n"}],RowBox[
+{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Step"," ","3"}],":"," ",RowBox[{"Training"," ","loop"}]}]," ","*)"}],"\n",RowBox[
+{"(*"," ",RowBox[{"Iteratively"," ","update"," ","the"," ","slope"," ",RowBox[{"(","c1",")"}]," ","and"," ","bias"," ",RowBox[
+{"(","c0",")"}]," ","to"," ","minimize"," ","the"," ","error"}]," ","*)"}],"\n",RowBox[
+{"Do","[","\n","    ",RowBox[{"(*"," ",RowBox[{RowBox[{"Step"," ","3.1"}],":"," ",RowBox[
+{"Make"," ","predictions"," ","using"," ","the"," ","current"," ","model"}]}]," ","*)"}],"\n","    ",RowBox[
+{"(*"," ",RowBox[{RowBox[{"Predictions"," ","are"," ","calculated"," ","as"," ","y_pred"}]," ","="," ",RowBox[
+{RowBox[{"c1"," ","*"," ","x"}]," ","+"," ","c0"}]}]," ","*)"}],"\n","    ",RowBox[
+{RowBox[{RowBox[{"predictions"," ","="," ",RowBox[{RowBox[{"c1"," ","*"," ","x"}]," ","+"," ","c0"}]}],";","\n","\n","    ",RowBox[
+{"(*"," ",RowBox[{RowBox[{"Step"," ","3.2"}],":"," ",RowBox[{"Calculate"," ","the"," ","error"," ",RowBox[
+{"(",RowBox[{"Mean"," ","Squared"," ","Error"}],")"}]}]}]," ","*)"}],"\n","    ",RowBox[
+{"(*"," ",RowBox[{"MSE"," ","="," ",RowBox[{RowBox[{"(",RowBox[{"1","/","n"}],")"}]," ","*"," ",RowBox[
+{"Sum","[",RowBox[{RowBox[{"(",RowBox[{"y_actual"," ","-"," ","y_pred"}],")"}],"^","2"}],"]"}]}]}]," ","*)"}],"\n","    ",RowBox[
+{"(*"," ",RowBox[{"The"," ","error"," ","measures"," ","how"," ","well"," ","the"," ",RowBox[
+{"model","'"}],"s"," ","predictions"," ","match"," ","the"," ","actual"," ",RowBox[
+{"data","."}]}]," ","*)"}],"\n","    ",RowBox[{"error"," ","="," ",RowBox[{RowBox[
+{"Total","[",RowBox[{RowBox[{"(",RowBox[{"y"," ","-"," ","predictions"}],")"}],"^","2"}],"]"}]," ","/"," ",RowBox[
+{"Length","[","x","]"}]}]}],";","\n","\n","    ",RowBox[{"(*"," ",RowBox[{RowBox[
+{"Step"," ","3.3"}],":"," ",RowBox[{"Update"," ","the"," ","slope"," ",RowBox[{"(","c1",")"}]," ","and"," ","bias"," ",RowBox[
+{"(","c0",")"}]," ","using"," ","gradient"," ","descent"}]}]," ","*)"}],"\n","    ",RowBox[
+{"(*"," ",RowBox[{"Gradient"," ","for"," ",RowBox[{"c1",":"," ",RowBox[{RowBox[{"(",RowBox[
+{RowBox[{"-","2"}],"/","n"}],")"}]," ","*"," ",RowBox[{"Sum","[",RowBox[{"x"," ","*"," ",RowBox[
+{"(",RowBox[{"y_actual"," ","-"," ","y_pred"}],")"}]}],"]"}]}]}]}]," ","*)"}],"\n","    ",RowBox[
+{"(*"," ",RowBox[{"Gradient"," ","for"," ",RowBox[{"c0",":"," ",RowBox[{RowBox[{"(",RowBox[
+{RowBox[{"-","2"}],"/","n"}],")"}]," ","*"," ",RowBox[{"Sum","[",RowBox[{"(",RowBox[
+{"y_actual"," ","-"," ","y_pred"}],")"}],"]"}]}]}]}]," ","*)"}],"\n","    ",RowBox[
+{"(*"," ",RowBox[{"Gradient"," ","descent"," ","adjusts"," ","the"," ","parameters"," ","to"," ","minimize"," ","the"," ",RowBox[
+{"error","."}]}]," ","*)"}],"\n","\[NonBreakingSpace] ",RowBox[{"(*",RowBox[{"Gradients"," ","are"," ","calculated"," ","to"," ","determine"," ","how"," ","the"," ","error"," ","changes"," ","with"," ","respect"," ","to"," ","the"," ","slope"," ","and"," ",RowBox[
+{"bias",".","\n"," ","The"}]," ","parameters"," ","are"," ","updated"," ","in"," ","the"," ","direction"," ","that"," ","reduces"," ","the"," ",RowBox[
+{"error","."}]}],"*)"}],"\n","    ",RowBox[{"c1"," ","-="," ",RowBox[{"learningRate"," ","*"," ",RowBox[
+{"(",RowBox[{RowBox[{RowBox[{"-","2"}],"/",RowBox[{"Length","[","x","]"}]}]," ","*"," ",RowBox[
+{"Total","[",RowBox[{"x"," ","*"," ",RowBox[{"(",RowBox[{"y"," ","-"," ","predictions"}],")"}]}],"]"}]}],")"}]}]}],";","\n","    ",RowBox[
+{"c0"," ","-="," ",RowBox[{"learningRate"," ","*"," ",RowBox[{"(",RowBox[{RowBox[
+{RowBox[{"-","2"}],"/",RowBox[{"Length","[","x","]"}]}]," ","*"," ",RowBox[{"Total","[",RowBox[
+{"y"," ","-"," ","predictions"}],"]"}]}],")"}]}]}],";","\n","\n","    ",RowBox[{"(*"," ",RowBox[
+{RowBox[{"Step"," ","3.4"}],":"," ",RowBox[{"Optional"," ","-"," ",RowBox[{"Print"," ","progress"," ","every"," ","100"," ","iterations"}]}]}]," ","*)"}],"\n","    ",RowBox[
+{"If","[",RowBox[{RowBox[{RowBox[{"Mod","[",RowBox[{"iteration",","," ","100"}],"]"}]," ","=="," ","0"}],",","\n","        ",RowBox[
+{"Print","[",RowBox[{"\"Iteration: \"",","," ","iteration",","," ","\", Error: \"",","," ","error",","," ","\", c1: \"",","," ","c1",","," ","\", c0: \"",","," ","c0"}],"]"}]}],"]"}],";"}],"\n",","," ",RowBox[
+{"{",RowBox[{"iteration",","," ","numIterations"}],"}"}]}],"]"}]}],";"}],RowBox[{"\n","\n"}],RowBox[
+{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Step"," ","4"}],":"," ",RowBox[{"Display"," ","the"," ","learned"," ","parameters"}]}]," ","*)"}],"\n",RowBox[
+{"Print","[","\"Training complete!\"","]"}]}],";"}],"\n",RowBox[{RowBox[{"Print","[",RowBox[
+{"\"Learned slope (c1): \"",","," ","c1"}],"]"}],";"}],"\n",RowBox[{RowBox[{"Print","[",RowBox[
+{"\"Learned bias (c0): \"",","," ","c0"}],"]"}],";"}],RowBox[{"\n","\n"}],RowBox[
+{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Step"," ","5"}],":"," ",RowBox[
+{"Make"," ","predictions"," ","for"," ","new"," ","data"}]}]," ","*)"}],"\n",RowBox[
+{"(*"," ",RowBox[{"Use"," ","the"," ","trained"," ","model"," ","to"," ","predict"," ","the"," ","output"," ","for"," ","a"," ","new"," ","input"," ","value"}]," ","*)"}],"\n","newX"}]," ","="," ","5"}],";"}]," ",RowBox[
+{"(*"," ",RowBox[{"New"," ","input"," ","value"}]," ","*)"}]}],"\n",RowBox[{RowBox[
+{RowBox[{"predictedY"," ","="," ",RowBox[{RowBox[{"c1"," ","*"," ","newX"}]," ","+"," ","c0"}]}],";"}]," ",RowBox[
+{"(*"," ",RowBox[{"Predicted"," ","output"}]," ","*)"}]}],"\n",RowBox[{RowBox[{"Print","[",RowBox[
+{"\"Prediction for x = \"",","," ","newX",","," ","\": y = \"",","," ","predictedY"}],"]"}],";"}]}],
+"Input",CellLabel -> "In[67]:= ",ExpressionUUID -> "ca2792a1-ac4a-4749-aadb-671a1862126a"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "14.2 for Wolfram Cloud 1.70.1 (December 30, 2024)"]

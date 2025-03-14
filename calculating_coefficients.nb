@@ -1,0 +1,39 @@
+Notebook[{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[
+{"Define"," ","the"," ","input"," ","data"," ","points"}]," ","*)"}],"\n","x"}]," ","="," ",RowBox[
+{"{",RowBox[{"1",","," ","2",","," ","3",","," ","4"}],"}"}]}],";"}],"  ",RowBox[
+{"(*"," ",RowBox[{"Independent"," ","variable"," ","values"}]," ","*)"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"y"," ","="," ",RowBox[{"{",RowBox[{"2",","," ","4",","," ","6",","," ","8"}],"}"}]}],";"}],"  ",RowBox[
+{"(*"," ",RowBox[{"Dependent"," ","variable"," ","values"}]," ","*)"}]}],RowBox[{"\n","\n"}],RowBox[
+{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Compute"," ","the"," ","number"," ","of"," ","data"," ","points"}]," ","*)"}],"\n","n"}]," ","="," ",RowBox[
+{"Length","[","x","]"}]}],";"}],"  ",RowBox[{"(*"," ",RowBox[{"Total"," ","number"," ","of"," ",RowBox[
+{"(",RowBox[{"x",","," ","y"}],")"}]," ","pairs"}]," ","*)"}]}],RowBox[{"\n","\n"}],RowBox[
+{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Compute"," ","necessary"," ","summations"," ","for"," ","linear"," ","regression"," ","formula"}]," ","*)"}],"\n","Sxy"}]," ","="," ",RowBox[
+{"Total","[",RowBox[{"x"," ","*"," ","y"}],"]"}]}],";"}],"  ",RowBox[{"(*"," ",RowBox[
+{"Sum"," ","of"," ","the"," ","product"," ","of"," ","corresponding"," ","x_i"," ","and"," ","y_i"," ","values"}]," ","*)"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"Sx"," ","="," ",RowBox[{"Total","[","x","]"}]}],";"}],"       ",RowBox[
+{"(*"," ",RowBox[{"Sum"," ","of"," ","all"," ","x_i"," ","values"}]," ","*)"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"Sy"," ","="," ",RowBox[{"Total","[","y","]"}]}],";"}],"       ",RowBox[
+{"(*"," ",RowBox[{"Sum"," ","of"," ","all"," ","y_i"," ","values"}]," ","*)"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"Sxx"," ","="," ",RowBox[{"Total","[",RowBox[{"x","^","2"}],"]"}]}],";"}],"    ",RowBox[
+{"(*"," ",RowBox[{"Sum"," ","of"," ","the"," ","squared"," ","x_i"," ","values"}]," ","*)"}]}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Compute"," ","the"," ","slope"," ",RowBox[
+{"(","c1",")"}]," ","using"," ","the"," ","least"," ","squares"," ","formula"}]," ","*)"}],"\n",RowBox[
+{"(*"," ",RowBox[{"c1"," ","="," ",RowBox[{RowBox[{"(",RowBox[{RowBox[{"n"," ","*"," ","\[CapitalSigma]",RowBox[
+{"(",RowBox[{"x_i"," ","*"," ","y_i"}],")"}]}]," ","-"," ",RowBox[{"\[CapitalSigma]x"," ","*"," ","\[CapitalSigma]y"}]}],")"}]," ","/"," ",RowBox[
+{"(",RowBox[{RowBox[{"n"," ","*"," ","\[CapitalSigma]",RowBox[{"(",RowBox[{"x_i","^","2"}],")"}]}]," ","-"," ",RowBox[
+{RowBox[{"(","\[CapitalSigma]x",")"}],"^","2"}]}],")"}]}]}]," ","*)"}],"\n","c1"}]," ","="," ",RowBox[
+{RowBox[{"(",RowBox[{RowBox[{"n"," ","*"," ","Sxy"}]," ","-"," ",RowBox[{"Sx"," ","*"," ","Sy"}]}],")"}]," ","/"," ",RowBox[
+{"(",RowBox[{RowBox[{"n"," ","*"," ","Sxx"}]," ","-"," ",RowBox[{"Sx","^","2"}]}],")"}]}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Compute"," ","the"," ","intercept"," ",RowBox[
+{"(","c0",")"}]," ","using"," ","the"," ","formula"}]," ","*)"}],"\n",RowBox[{"(*"," ",RowBox[
+{"c0"," ","="," ",RowBox[{RowBox[{"(",RowBox[{"\[CapitalSigma]y"," ","-"," ",RowBox[
+{"c1"," ","*"," ","\[CapitalSigma]x"}]}],")"}]," ","/"," ","n"}]}]," ","*)"}],"\n","c0"}]," ","="," ",RowBox[
+{RowBox[{"(",RowBox[{"Sy"," ","-"," ",RowBox[{"c1"," ","*"," ","Sx"}]}],")"}]," ","/"," ","n"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Display"," ","the"," ","computed"," ","regression"," ","coefficients"}]," ","*)"}],"\n",RowBox[
+{"Print","[",RowBox[{"\"Slope (c1): \"",","," ","c1"}],"]"}]}],";"}],"  ",RowBox[
+{"(*"," ",RowBox[{"Represents"," ","the"," ","change"," ","in"," ","y"," ","for"," ","each"," ","unit"," ","increase"," ","in"," ","x"}]," ","*)"}]}],"\n",RowBox[
+{RowBox[{RowBox[{"Print","[",RowBox[{"\"Bias (c0): \"",","," ","c0"}],"]"}],";"}],"    ",RowBox[
+{"(*"," ",RowBox[{RowBox[{RowBox[{"Represents"," ","the"," ","y"}],"-",RowBox[{"intercept"," ","when"," ","x"}]}]," ","="," ","0"}]," ","*)"}]}]}],
+"Input",CellLabel -> "In[80]:= ",ExpressionUUID -> "77faac9d-6796-42db-aca5-b37bf178f82e"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "14.2 for Wolfram Cloud 1.70.1 (December 30, 2024)"]
