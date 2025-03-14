@@ -1,0 +1,130 @@
+Notebook[{Cell[
+BoxData[RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{"Function"," ","to"," ","check"," ","linear"," ",RowBox[
+{"dependence","/","independence"}]}]," ","*)"}],"\n",RowBox[{"CheckLinearDependence","[","vectors_","]"}]}]," ",":="," ",RowBox[
+{"Module","[",RowBox[{RowBox[{"{",RowBox[{"matrix",","," ","rank",","," ","numVectors"}],"}"}],",","\n","  ",RowBox[
+{"(*"," ",RowBox[{"Create"," ","a"," ","matrix"," ","where"," ","each"," ","vector"," ","is"," ","a"," ","column"}]," ","*)"}],"\n","  ",RowBox[
+{RowBox[{"matrix"," ","="," ",RowBox[{"Transpose","[","vectors","]"}]}],";","\n","  ","\n","  ",RowBox[
+{"(*"," ",RowBox[{"Get"," ","the"," ","rank"," ","of"," ","the"," ","matrix"}]," ","*)"}],"\n","  ",RowBox[
+{"rank"," ","="," ",RowBox[{"MatrixRank","[","matrix","]"}]}],";","\n","  ","\n","  ",RowBox[
+{"(*"," ",RowBox[{"Get"," ","the"," ","number"," ","of"," ","vectors"}]," ","*)"}],"\n","  ",RowBox[
+{"numVectors"," ","="," ",RowBox[{"Length","[","vectors","]"}]}],";","\n","  ","\n","  ",RowBox[
+{"(*"," ",RowBox[{"Determine"," ","if"," ","the"," ","vectors"," ","are"," ","linearly"," ","dependent"," ","or"," ","independent"}]," ","*)"}],"\n","  ",RowBox[
+{"If","[",RowBox[{RowBox[{"rank"," ","<"," ","numVectors"}],",","\n","    ",RowBox[
+{"Print","[","\"The vectors are linearly DEPENDENT.\"","]"}],",","\n","    ",RowBox[
+{"Print","[","\"The vectors are linearly INDEPENDENT.\"","]"}]}],"\n","  ","]"}],";","\n","  ","\n","  ",RowBox[
+{"(*"," ",RowBox[{"Display"," ","the"," ","matrix"," ","and"," ","its"," ","rank"}]," ","*)"}],"\n","  ",RowBox[
+{"Print","[",RowBox[{"\"Matrix: \"",","," ",RowBox[{"MatrixForm","[","matrix","]"}]}],"]"}],";","\n","  ",RowBox[
+{"Print","[",RowBox[{"\"Rank of the matrix: \"",","," ","rank"}],"]"}],";"}]}],"\n","]"}]}]],
+"Input",CellLabel -> "In[8]:= ",ExpressionUUID -> "2713973a-1ac6-4018-8695-fba6666868b2"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Example"," ","1"}],":"," ",RowBox[
+{"Linearly"," ","Independent"," ","Vectors"}]}]," ","*)"}],"\n","vectors1"}]," ","="," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"1",","," ","0",","," ","0"}],"}"}],","," ",RowBox[
+{"{",RowBox[{"0",","," ","1",","," ","0"}],"}"}],","," ",RowBox[{"{",RowBox[{"0",","," ","0",","," ","1"}],"}"}]}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"Print","[",RowBox[{"\"Example 1: \"",","," ","vectors1"}],"]"}],";"}],"\n",RowBox[
+{RowBox[{"CheckLinearDependence","[","vectors1","]"}],";"}]}],"Input",CellLabel -> "In[9]:= ",
+ExpressionUUID -> "4e2ee23f-5724-45a5-a172-68c783c79115"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"Example 1: \"","\[InvisibleSpace]",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[
+{"1",",","0",",","0"}],"}"}],",",RowBox[{"{",RowBox[{"0",",","1",",","0"}],"}"}],",",RowBox[
+{"{",RowBox[{"0",",","0",",","1"}],"}"}]}],"}"}]}],SequenceForm["Example 1: ",{{1,0,0},{0,1,0},{0,0,1}}],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "0944b478-f30c-43ec-97d4-b8318a8a00a0"],Cell[
+BoxData[
+"\"The vectors are linearly INDEPENDENT.\"",StandardForm],"Print",ExpressionUUID -> "6c2222dd-79ab-4dc8-950d-d6c3357139ab"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"Matrix: \"","\[InvisibleSpace]",TagBox[RowBox[{"(","\[NoBreak]",GridBox[
+{{"1","0","0"},{"0","1","0"},{"0","0","1"}},RowSpacings -> 1,ColumnSpacings -> 1,
+RowAlignments -> Baseline,ColumnAlignments -> Center],"\[NoBreak]",")"}],Function[
+BoxForm`e$,MatrixForm[BoxForm`e$]]]}],SequenceForm["Matrix: ",MatrixForm[{{1,0,0},{0,1,0},{0,0,1}}]],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "bd9e80f8-cec0-4ec8-9903-82d3b163c0a0"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"Rank of the matrix: \"","\[InvisibleSpace]","3"}],SequenceForm[
+"Rank of the matrix: ",3],Editable -> False],StandardForm],"Print",ExpressionUUID -> "d951a9d7-c479-403a-912a-b0a7a4245ac7"]},
+Open],ExpressionUUID -> "0ef39c6b-4cc1-4c60-9a5c-e2b6b31944f6"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Example"," ","2"}],":"," ",RowBox[
+{"Linearly"," ","Dependent"," ","Vectors"}]}]," ","*)"}],"\n","vectors2"}]," ","="," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"1",","," ","2",","," ","3"}],"}"}],","," ",RowBox[
+{"{",RowBox[{"4",","," ","5",","," ","6"}],"}"}],","," ",RowBox[{"{",RowBox[{"7",","," ","8",","," ","9"}],"}"}]}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"Print","[",RowBox[{"\"Example 2: \"",","," ","vectors2"}],"]"}],";"}],"\n",RowBox[
+{RowBox[{"CheckLinearDependence","[","vectors2","]"}],";"}]}],"Input",CellLabel -> "In[12]:= ",
+ExpressionUUID -> "d0cf2c76-94ba-4165-9a6c-8dbba1044c70"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"Example 2: \"","\[InvisibleSpace]",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[
+{"1",",","2",",","3"}],"}"}],",",RowBox[{"{",RowBox[{"4",",","5",",","6"}],"}"}],",",RowBox[
+{"{",RowBox[{"7",",","8",",","9"}],"}"}]}],"}"}]}],SequenceForm["Example 2: ",{{1,2,3},{4,5,6},{7,8,9}}],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "7d8afca0-42a6-4b83-987a-53721bf9f5bf"],Cell[
+BoxData[
+"\"The vectors are linearly DEPENDENT.\"",StandardForm],"Print",ExpressionUUID -> "b5f3fff0-80d1-411b-8aaf-09246ddd3aa7"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"Matrix: \"","\[InvisibleSpace]",TagBox[RowBox[{"(","\[NoBreak]",GridBox[
+{{"1","4","7"},{"2","5","8"},{"3","6","9"}},RowSpacings -> 1,ColumnSpacings -> 1,
+RowAlignments -> Baseline,ColumnAlignments -> Center],"\[NoBreak]",")"}],Function[
+BoxForm`e$,MatrixForm[BoxForm`e$]]]}],SequenceForm["Matrix: ",MatrixForm[{{1,4,7},{2,5,8},{3,6,9}}]],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "804d31c7-6212-4769-910f-043092d53853"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"\"Rank of the matrix: \"","\[InvisibleSpace]","2"}],SequenceForm[
+"Rank of the matrix: ",2],Editable -> False],StandardForm],"Print",ExpressionUUID -> "2060634b-bf6d-4e05-9772-0747795bbb2f"]},
+Open],ExpressionUUID -> "9818ea37-a121-4ebf-bd42-1e2e4c53fdbf"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"\n","Finding"," ","the"," ","coefficients"," ","in"," ","a"," ","matrix"}],
+"Subtitle",ExpressionUUID -> "ee354a05-b52f-462c-83be-ba1949c1090d"],Cell[
+BoxData[
+{RowBox[{"ClearAll","[","\"Global`*\"","]"}],"\n",RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[
+{RowBox[{"Function"," ","to"," ","find"," ","coefficients"," ","c1"}],","," ","c2",","," ","...",","," ","cn"}]," ","*)"}],"\n",RowBox[
+{"FindCoefficients","[","vectors_","]"}]}]," ",":="," ",RowBox[{"Module","[",RowBox[
+{RowBox[{"{",RowBox[{"matrix",","," ","coeffs"}],"}"}],",","\n","  ",RowBox[{"(*"," ",RowBox[
+{"Create"," ","a"," ","matrix"," ","where"," ","each"," ","vector"," ","is"," ","a"," ","column"}]," ","*)"}],"\n","  ",RowBox[
+{RowBox[{"matrix"," ","="," ",RowBox[{"Transpose","[","vectors","]"}]}],";","\n","  ","\n","  ",RowBox[
+{"(*"," ",RowBox[{RowBox[{"Solve"," ","the"," ","homogeneous"," ",RowBox[{"system",":"," ",RowBox[
+{"matrix"," ","."," ",RowBox[{"{",RowBox[{"c1",","," ","c2",","," ","...",","," ","cn"}],"}"}]}]}]}]," ","="," ","0"}]," ","*)"}],"\n","  ",RowBox[
+{"coeffs"," ","="," ",RowBox[{"NullSpace","[","matrix","]"}]}],";","\n","  ","\n","  ",RowBox[
+{"(*"," ",RowBox[{"Display"," ","the"," ","coefficients"}]," ","*)"}],"\n","  ",RowBox[
+{"If","[",RowBox[{RowBox[{"coeffs"," ","=="," ",RowBox[{"{","}"}]}],",","\n","    ",RowBox[
+{"Print","[","\"The vectors are linearly INDEPENDENT. Only trivial solution exists.\"","]"}],",","\n","    ",RowBox[
+{RowBox[{"Print","[","\"The vectors are linearly DEPENDENT. Non-trivial solutions:\"","]"}],";","\n","    ",RowBox[
+{"Print","[",RowBox[{"MatrixForm","[","coeffs","]"}],"]"}]}]}],"\n","  ","]"}]}]}],"\n","]"}]}]}],
+"Input",CellLabel -> "In[52]:= ",ExpressionUUID -> "e8d36fbb-992e-41d2-b4b5-296c2aeb08f3"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Example"," ","1"}],":"," ",RowBox[
+{"Linearly"," ","Independent"," ","Vectors"}]}]," ","*)"}],"\n","vectors1"}]," ","="," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"1",","," ","0",","," ","0"}],"}"}],","," ",RowBox[
+{"{",RowBox[{"0",","," ","1",","," ","0"}],"}"}],","," ",RowBox[{"{",RowBox[{"0",","," ","0",","," ","1"}],"}"}]}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"Print","[",RowBox[{"\"Example 1: \"",","," ","vectors1"}],"]"}],";"}],"\n",RowBox[
+{RowBox[{"FindCoefficients","[","vectors1","]"}],";"}]}],"Input",CellLabel -> "In[54]:= ",
+ExpressionUUID -> "976c7d99-4506-484b-905a-5f36f919aa1f"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"Example 1: \"","\[InvisibleSpace]",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[
+{"1",",","0",",","0"}],"}"}],",",RowBox[{"{",RowBox[{"0",",","1",",","0"}],"}"}],",",RowBox[
+{"{",RowBox[{"0",",","0",",","1"}],"}"}]}],"}"}]}],SequenceForm["Example 1: ",{{1,0,0},{0,1,0},{0,0,1}}],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "b93c3465-a0f7-4d47-889d-473dc27292c1"],Cell[
+BoxData[
+"\"The vectors are linearly INDEPENDENT. Only trivial solution exists.\"",StandardForm],
+"Print",ExpressionUUID -> "ab92b2a5-6388-4ead-83cf-36628d8bccf9"]},Open],ExpressionUUID -> "5c6bd83b-5eff-47b8-a775-cb65822483c0"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{RowBox[{RowBox[{RowBox[{"(*"," ",RowBox[{RowBox[{"Example"," ","2"}],":"," ",RowBox[
+{"Linearly"," ","Dependent"," ","Vectors"}]}]," ","*)"}],"\n","vectors2"}]," ","="," ",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{"1",","," ","2",","," ","3"}],"}"}],","," ",RowBox[
+{"{",RowBox[{"4",","," ","5",","," ","6"}],"}"}],","," ",RowBox[{"{",RowBox[{"7",","," ","8",","," ","9"}],"}"}]}],"}"}]}],";"}],"\n",RowBox[
+{RowBox[{"Print","[",RowBox[{"\"Example 2: \"",","," ","vectors2"}],"]"}],";"}],"\n",RowBox[
+{RowBox[{"FindCoefficients","[","vectors2","]"}],";"}]}],"Input",CellLabel -> "In[57]:= ",
+ExpressionUUID -> "d74583f6-405a-418a-8aba-1a01c786c331"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"\"Example 2: \"","\[InvisibleSpace]",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[
+{"1",",","2",",","3"}],"}"}],",",RowBox[{"{",RowBox[{"4",",","5",",","6"}],"}"}],",",RowBox[
+{"{",RowBox[{"7",",","8",",","9"}],"}"}]}],"}"}]}],SequenceForm["Example 2: ",{{1,2,3},{4,5,6},{7,8,9}}],
+Editable -> False],StandardForm],"Print",ExpressionUUID -> "6bea2bd4-910b-4068-b2dc-65a1345b161a"],Cell[
+BoxData[
+"\"The vectors are linearly DEPENDENT. Non-trivial solutions:\"",StandardForm],"Print",
+ExpressionUUID -> "6d3eeb90-57fb-435f-8b94-c17ccd54c1d5"],Cell[
+BoxData[TagBox[RowBox[
+{"(","\[NoBreak]",GridBox[{{"1",RowBox[{"-","2"}],"1"}},RowSpacings -> 1,ColumnSpacings -> 1,
+RowAlignments -> Baseline,ColumnAlignments -> Center],"\[NoBreak]",")"}],Function[
+BoxForm`e$,MatrixForm[BoxForm`e$]]],StandardForm],"Print",ExpressionUUID -> "75a55ddc-7cf3-406d-80b6-b444ff209d11"]},
+Open],ExpressionUUID -> "5beeac2f-1749-4c44-87ca-f1c0c899264d"]},Open],ExpressionUUID -> "ad129dd0-29ac-4d8e-ab8c-2cec7317ddfb"]},
+StyleDefinitions -> "Default.nb",FrontEndVersion -> "14.2 for Wolfram Cloud 1.70.1 (December 30, 2024)"]
